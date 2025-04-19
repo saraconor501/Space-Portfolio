@@ -5,8 +5,10 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import {Points, PointMaterial} from '@react-three/drei';
 import * as random from 'maath/random';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const StarBackground = (props: any) => {
-    const ref: any = useRef();
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const ref: any = useRef(null);
     const [sphere] = useState(() =>
         random.inSphere(new Float32Array(5001), { radius: 1.2 })
       );
